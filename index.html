@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>برنامج المقاولات – إدارة ذكية لمشروعاتك</title>
+  <meta name="description" content="برنامج متكامل لإدارة مشاريع المقاولات: الشركاء، المصاريف، الوحدات، المبيعات والأقساط، الأرباح وأرصدة الشركاء." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { cairo: ['Cairo', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: {
+              DEFAULT: '#0E69B2', // أزرق أساسي
+              dark: '#0A4D80',
+              light: '#E6F1FA'
+            },
+            accent: {
+              DEFAULT: '#FF6A3D', // برتقالي مائل للأحمر
+              dark: '#DB4F24'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 25px rgba(14, 105, 178, 0.12)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body { height: 100%; }
+    body { font-family: 'Cairo', system-ui, sans-serif; }
+    .glass { backdrop-filter: saturate(140%) blur(10px); background: rgba(255,255,255,0.7); }
+    .hero-bg { background: radial-gradient(1200px 600px at 90% -10%, rgba(14,105,178,0.15), transparent 60%),
+                         radial-gradient(800px 500px at 10% -20%, rgba(255,106,61,0.18), transparent 60%),
+                         linear-gradient(180deg, #ffffff 0%, #F5FAFF 100%); }
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+  <!-- NAV -->
+  <header class="hero-bg sticky top-0 z-40 border-b border-slate-100/70">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-4">
+        <a href="#" class="flex items-center gap-2">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand text-white shadow-soft">🏗️</span>
+          <span class="text-xl font-extrabold text-brand">Unit Space </span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#features" class="hover:text-brand">المزايا</a>
+          <a href="#modules" class="hover:text-brand">الوحدات</a>
+          <a href="#reports" class="hover:text-brand">التقارير</a>
+          <a href="#contact" class="hover:text-brand">تواصل</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="#demo" class="rounded-2xl border border-brand/20 px-4 py-2 text-sm font-semibold text-brand hover:bg-brand/5">شاهد العرض</a>
+          <a href="#contact" class="rounded-2xl bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-dark shadow-soft">ابدأ الآن</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-bg relative">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:py-20">
+      <div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-slate-900">
+          إدارة ذكية لمشروعات <span class="text-brand">المقاولات</span>
+        </h1>
+        <p class="mt-4 text-lg text-slate-700">
+          من إنشاء المشروع وتحديد الشركاء ونِسَبهم، إلى متابعة المصاريف والمبيعات وخطط الأقساط،
+          وصولاً لحساب الأرباح وتوزيعها بدقة – كل هذا من مكان واحد.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a href="#contact" class="rounded-2xl bg-brand px-6 py-3 text-white font-bold hover:bg-brand-dark shadow-soft">جرّب الآن</a>
+          <a href="#features" class="rounded-2xl px-6 py-3 font-bold text-brand hover:bg-brand/light">تعرّف على المزايا</a>
+        </div>
+        <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+          <div class="glass rounded-2xl p-4 shadow-sm">
+            <div class="text-2xl font-extrabold text-brand">+99%</div>
+            <div class="text-sm text-slate-600">دقة البيانات</div>
+          </div>
+          <div class="glass rounded-2xl p-4 shadow-sm">
+            <div class="text-2xl font-extrabold text-brand">-60%</div>
+            <div class="text-sm text-slate-600">وقت المتابعة</div>
+          </div>
+          <div class="glass rounded-2xl p-4 shadow-sm">
+            <div class="text-2xl font-extrabold text-brand">100%</div>
+            <div class="text-sm text-slate-600">شفافية الأرباح</div>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-6 -z-10 rounded-3xl bg-gradient-to-tr from-brand/10 via-accent/10 to-transparent blur-2xl"></div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-4 shadow-soft">
+          <div class="grid grid-cols-2 gap-3">
+            <div class="rounded-2xl bg-brand/light p-4">
+              <p class="text-sm font-bold text-brand mb-1">المشاريع</p>
+              <p class="text-sm text-slate-600">بيانات، حالة، تكاليف</p>
+            </div>
+            <div class="rounded-2xl bg-brand/light p-4">
+              <p class="text-sm font-bold text-brand mb-1">الشركاء</p>
+              <p class="text-sm text-slate-600">نِسَب وتوزيع أرباح</p>
+            </div>
+            <div class="rounded-2xl bg-brand/light p-4">
+              <p class="text-sm font-bold text-brand mb-1">الوحدات</p>
+              <p class="text-sm text-slate-600">متاحة / محجوزة / مباعة</p>
+            </div>
+            <div class="rounded-2xl bg-brand/light p-4">
+              <p class="text-sm font-bold text-brand mb-1">الأقساط</p>
+              <p class="text-sm text-slate-600">خطط دفع ومتابعة</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="relative border-t border-slate-100 bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">المزايا الرئيسية</h2>
+        <p class="mt-3 text-slate-600">تحكّم كامل، دقة أعلى، وأرباح أوضح.</p>
+      </div>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Feature Card -->
+        <div class="rounded-3xl border border-slate-200 p-6 shadow-soft hover:shadow-lg transition">
+          <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand text-white">📊</div>
+          <h3 class="font-bold text-lg">متابعة شاملة</h3>
+          <p class="mt-2 text-sm text-slate-600">لوحات معلومات فورية لكل مراحل المشروع من البداية للتسليم.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 p-6 shadow-soft hover:shadow-lg transition">
+          <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand text-white">🤝</div>
+          <h3 class="font-bold text-lg">إدارة الشركاء</h3>
+          <p class="mt-2 text-sm text-slate-600">تحديد نسب الملكية وتوزيع الأرباح تلقائيًا وبدقة.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 p-6 shadow-soft hover:shadow-lg transition">
+          <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand text-white">💰</div>
+          <h3 class="font-bold text-lg">رقابة مالية دقيقة</h3>
+          <p class="mt-2 text-sm text-slate-600">تسجيل المصاريف والإيرادات وربطها بالمشاريع والوحدات.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 p-6 shadow-soft hover:shadow-lg transition">
+          <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand text-white">🏘</div>
+          <h3 class="font-bold text-lg">إدارة الوحدات</h3>
+          <p class="mt-2 text-sm text-slate-600">تتبّع حالة كل وحدة: متاحة، محجوزة، أو مباعة مع الأسعار والمساحات.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 p-6 shadow-soft hover:shadow-lg transition">
+          <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand text-white">📅</div>
+          <h3 class="font-bold text-lg">خطط دفع وأقساط</h3>
+          <p class="mt-2 text-sm text-slate-600">إنشاء جداول سداد ومتابعة التحصيل وإشعارات الاستحقاق.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 p-6 shadow-soft hover:shadow-lg transition">
+          <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand text-white">📈</div>
+          <h3 class="font-bold text-lg">أرباح وأرصدة الشركاء</h3>
+          <p class="mt-2 text-sm text-slate-600">حساب الأرباح المتوقعة والفعلية وتوزيعها على الشركاء لحظيًا.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULES -->
+  <section id="modules" class="relative bg-brand/light">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">الوحدات والوظائف</h2>
+        <p class="mt-3 text-slate-700">كل ما تحتاجه لإدارة عملياتك اليومية.</p>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <ul class="rounded-3xl bg-white p-6 shadow-soft border border-slate-200 space-y-2">
+          <li class="font-bold text-brand">📁 إدارة المشاريع</li>
+          <li class="text-slate-600">بيانات المشروع، الحالة، التواريخ، الصور.</li>
+          <li class="font-bold text-brand pt-2">🤝 الشركاء</li>
+          <li class="text-slate-600">نِسَب الملكية، الأرصدة، التسويات.</li>
+        </ul>
+        <ul class="rounded-3xl bg-white p-6 shadow-soft border border-slate-200 space-y-2">
+          <li class="font-bold text-brand">💸 المصاريف</li>
+          <li class="text-slate-600">تصنيفات، مرفقات، موافقات.</li>
+          <li class="font-bold text-brand pt-2">🏘 إدارة الوحدات</li>
+          <li class="text-slate-600">أسعار، مساحات، حالات البيع.</li>
+        </ul>
+        <ul class="rounded-3xl bg-white p-6 shadow-soft border border-slate-200 space-y-2">
+          <li class="font-bold text-brand">🧾 المبيعات والعقود</li>
+          <li class="text-slate-600">عقود، دفعات، عمولات.</li>
+          <li class="font-bold text-brand pt-2">📅 الأقساط والتحصيل</li>
+          <li class="text-slate-600">جداول سداد، تنبيهات، تقارير.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORTS -->
+  <section id="reports" class="relative">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="grid gap-10 lg:grid-cols-2 items-center">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">تقارير ولوحات تحكم</h2>
+          <p class="mt-3 text-slate-700">رؤية لحظية للمبيعات، المصاريف، الأرباح، وأرصدة الشركاء – مع إمكانيات تصدير PDF/Excel.</p>
+          <ul class="mt-6 space-y-3 text-slate-700">
+            <li>✔️ تحليل الربحية لكل مشروع ووحدة.</li>
+            <li>✔️ تتبّع التحصيل ومواعيد الاستحقاق.</li>
+            <li>✔️ كشف حساب الشركاء وتوزيعات الأرباح.</li>
+          </ul>
+          <div class="mt-6 flex gap-3">
+            <a href="#contact" class="rounded-2xl bg-accent px-6 py-3 text-white font-bold hover:bg-accent-dark shadow-soft">اطلب عرضًا حيًا</a>
+            <a href="#demo" class="rounded-2xl px-6 py-3 font-bold text-brand hover:bg-brand/light">شاهد صور من النظام</a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-tr from-accent/10 via-brand/10 to-transparent blur-xl"></div>
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="grid grid-cols-3 gap-4 text-center">
+              <div class="rounded-2xl bg-brand/light p-4">
+                <div class="text-3xl font-extrabold text-brand">24</div>
+                <div class="text-sm text-slate-600">تقارير جاهزة</div>
+              </div>
+              <div class="rounded-2xl bg-brand/light p-4">
+                <div class="text-3xl font-extrabold text-brand">8</div>
+                <div class="text-sm text-slate-600">لوحات تحكم</div>
+              </div>
+              <div class="rounded-2xl bg-brand/light p-4">
+                <div class="text-3xl font-extrabold text-brand">∞</div>
+                <div class="text-sm text-slate-600">تخصيص مرن</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="relative bg-gradient-to-b from-brand/light to-white">
+    <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">جاهز تخلّي إدارة مشاريعك أسهل وأوضح؟</h2>
+      <p class="mt-3 text-slate-700">تواصل معنا للحصول على تجربة حيّة واستشارة مجانية لتجهيز النظام بما يناسب شركتك.</p>
+      <form class="mx-auto mt-8 grid gap-3 sm:max-w-2xl sm:grid-cols-2">
+        <input required type="text" placeholder="الاسم" class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-brand" />
+        <input required type="tel" placeholder="رقم الجوال" class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-brand" />
+        <input required type="email" placeholder="البريد الإلكتروني" class="sm:col-span-2 w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-brand" />
+        <textarea placeholder="اكتب متطلباتك بإيجاز" rows="4" class="sm:col-span-2 w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 outline-none focus:border-brand"></textarea>
+        <button type="submit" class="sm:col-span-2 rounded-2xl bg-brand px-6 py-3 text-white font-bold hover:bg-brand-dark shadow-soft">أرسل الطلب</button>
+      </form>
+      <p class="mt-4 text-sm text-slate-500">بالضغط على أرسل، فأنت توافق على سياسة الخصوصية.</p>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-100 bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 flex flex-col gap-3 sm:flex-row items-center justify-between">
+      <p class="text-sm text-slate-600">© <span id="y"></span> برنامج المقاولات. جميع الحقوق محفوظة.</p>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="#" class="hover:text-brand">سياسة الخصوصية</a>
+        <span class="text-slate-300">|</span>
+        <a href="#" class="hover:text-brand">الشروط والأحكام</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // منع الإرسال الفعلي للنموذج في العرض التجريبي
+    document.querySelector('form')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('تم استلام طلبك. سنعاود التواصل قريبًا.');
+    });
+  </script>
+</body>
+</html>
